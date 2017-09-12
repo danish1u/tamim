@@ -1,0 +1,116 @@
+
+        .accordion {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0 auto;
+            font-size: 14px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .accordion ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .accordion li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .accordion [type=radio],
+        .accordion [type=checkbox] {
+            display: none;
+        }
+
+        .accordion label {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            color: #555558;
+            text-transform: uppercase;
+            background: rgba(198, 194, 182, 0.79) !important;
+            transition: all 0.5s ease 0s;
+            text-align: center;
+        }
+
+        .accordion ul li label.accordion [type=radio]:checked~ label,
+        .accordion [type=checkbox]:checked~ label {
+            background: #ec008c !important;
+            color: #FFF;
+            font-size: 16px;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5)
+        }
+
+        .accordion .content {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.20em;
+            padding: 0 10px;
+            overflow: hidden;
+            border: 1px solid #fff;
+            /* Make the border match the background so it fades in nicely */
+            -webkit-transition: all 1.5s ease-out;
+            -moz-transition: all 1.5s ease-out;
+        }
+
+        .accordion p {
+            color: #333;
+            margin: 0 0 10px;
+        }
+
+        .accordion h3 {
+            color: #542437;
+            padding: 0;
+            margin: 27px 0;
+        }
+        /* Vertical */
+
+        .vertical ul li {
+            overflow: hidden;
+            margin: 0 0 1px;
+            font-size: 14px;
+            width: 100%;
+            padding: 1px;
+            background: #fff;
+        }
+
+        .vertical ul li label {
+            padding: 8px;
+        }
+
+        .vertical ul li label:after {
+            content: "";
+            position: absolute;
+            left: 40px;
+            border: 15px solid transparent;
+            border-bottom: 15px solid #fff;
+        }
+
+        .vertical [type=radio]:checked~ label,
+        .vertical [type=checkbox]:checked~ label {
+            border-bottom: 0;
+        }
+
+        .vertical ul li label:hover {
+            color:#edb459 !important;
+            cursor: pointer;
+            -webkit-transition: background-color 2s ease-out;
+            -moz-transition: background-color 2s ease-out;
+            -o-transition: background-color 2s ease-out;
+        }
+
+        .vertical ul li .content {
+            height: 0px;
+            border-top: 0;
+            font-size: 14px;
+            color: #fff;
+            line-height: 25px;
+            border: none;
+            position: relative;
+            margin-top: -6px;
+        }
+
+        .vertical [type=radio]:checked~ label~ .content,
+        .vertical [type=checkbox]:checked~ label~ .content {
+            height: auto;
+        }
